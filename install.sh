@@ -29,12 +29,12 @@ fi
 ln -sf "$(pwd)/vim/vimrc" ~/.vimrc
 if [ -d "$HOME/.vim" ]
 then
-	ln -sf $(pwd)/vim/vim.conf ~/.vim
+	ln -sf $(pwd)/vim/vim.config ~/.vim/vim.config
     echo "in then"
 else
     echo "in else"
     mkdir $HOME/.vim
-    ln -sf $(pwd)/vim/vim.conf ~/.vim/vim.config
+    ln -sf $(pwd)/vim/vim.config ~/.vim/vim.config
 fi
 
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
