@@ -42,6 +42,6 @@ fi
 #oh-my-zsh/plugins/fzf/install --bin > /dev/null || true
 #ln -sfT "$(pwd)/vim" ~/.vim
 #ln -sf "$(pwd)/vim/vimrc" ~/.vimrc
-#ln -sf "$(pwd)/tmux.conf" ~/.tmux.conf
+ln -sf "$(pwd)/tmux/tmux.conf" ~/.tmux.conf
 #ln -sf "$(pwd)/zshrc" ~/.zshrc
 #ln -sf "$(pwd)/zprofile" ~/.zprofile
