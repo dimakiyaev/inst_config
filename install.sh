@@ -26,11 +26,11 @@ fi
 
 # Vim init
 ln -sf "$(pwd)/vim/vimrc" ~/.vimrc
-if [ -d "~/.vim "]; then
+if [ -d "~/.vim" ]; then
     cp $(pwd)/vim/vim.conf ~/.vim
 else
     mkdir ~/.vim
-    ln -sf $(pwd)/vim/vim.conf ~/.vim/vom.conf
+    ln -sf $(pwd)/vim/vim.conf ~/.vim/vim.conf
 fi
 
 
