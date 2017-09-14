@@ -30,9 +30,7 @@ ln -sf "$(pwd)/vim/vimrc" ~/.vimrc
 if [ -d "$HOME/.vim" ]
 then
 	ln -sf $(pwd)/vim/vim.config ~/.vim/vim.config
-    echo "in then"
 else
-    echo "in else"
     mkdir $HOME/.vim
     ln -sf $(pwd)/vim/vim.config ~/.vim/vim.config
 fi
