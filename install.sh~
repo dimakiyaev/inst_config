@@ -27,10 +27,10 @@ fi
 # Vim init
 ln -sf "$(pwd)/vim/vimrc" ~/.vimrc
 if [ -d "~/.vim" ]; then
-	ln -sf $(pwd)/vim/vim.conf ~/.vim
+    cp $(pwd)/vim/vim.conf ~/.vim
 else
-    	mkdir ~/.vim
-    	ln -sf $(pwd)/vim/vim.conf ~/.vim/vim.conf
+    mkdir ~/.vim
+    ln -sf $(pwd)/vim/vim.conf ~/.vim/vim.conf
 fi
 
 
