@@ -24,16 +24,18 @@ if [ "$right_folder" != "$script_dir" ]; then
     exit $?
 fi
 
+
 # Vim init
 ln -sf "$(pwd)/vim/vimrc" ~/.vimrc
-if [ -d "~/.vim" ]; then
+if [ -d "$HOME/.vim" ]
+then
 	ln -sf $(pwd)/vim/vim.conf ~/.vim
+    echo "in then"
 else
-    	mkdir ~/.vim
-    	ln -sf $(pwd)/vim/vim.conf ~/.vim/vim.conf
+    echo "in else"
+    mkdir $HOME/.vim
+    ln -sf $(pwd)/vim/vim.conf ~/.vim/vim.config
 fi
-
-
 
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 #git pull
