@@ -82,4 +82,4 @@ git pull && git submodule update --init
 #ln -sf "$(pwd)/vim/vimrc" ~/.vimrc
 
 #ln -sf "$(pwd)/zshrc" ~/.zshrc
-#ln -sf "$(pwd)/zprofile" ~/.zprofile
+ln -sf "$(pwd)/zsh/zprofile" ~/.zprofile

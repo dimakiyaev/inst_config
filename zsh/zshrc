@@ -2,7 +2,19 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/kiyaevadm/.oh-my-zsh
+
+if [ -d $HOME/.dotfiles/oh-my-zsh ]; then
+    export ZSH=$HOME/.dotfiles/oh-my-zsh
+    export DISABLE_UPDATE_PROMPT=true
+    export DISABLE_AUTO_UPDATE=true
+    #ZSH_THEME="robbyrussell"
+    #ZSH_THEME="bira"
+    ZSH_THEME="candy"
+    plugins=(git docker npm pip tmux web-search zsh-autosuggestions fzf-zsh)
+    ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+    source $ZSH/oh-my-zsh.sh
+    bindkey '`' autosuggest-accept
+fi
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
