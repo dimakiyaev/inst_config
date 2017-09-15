@@ -2,6 +2,7 @@
 
 set -e
 
+
 script_dir="$(dirname $(realpath "$0"))"
 cd "$script_dir"
 
@@ -67,7 +68,8 @@ fi
 
 if [ ! -d $HOME/.oh-my-zsh ]; then
     echo oh-my-zsh not  installing...
-    (sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &)
+    #    (sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &)
+    ./zsh/ohmyzsh.sh
     echo Done!!
 else
     echo oh-my-zsh already install
