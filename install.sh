@@ -61,7 +61,6 @@ if echo $SHELL | grep -q zsh ; then
     if [ ! -d $HOME/.oh-my-zsh ]; then
         echo oh-my-zsh not  installing...
         sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-        ln -sf "$(pwd)/zsh/zshrc" ~/.zshrc
         echo Done!!
     else
         echo oh-my-zsh already install
@@ -69,6 +68,7 @@ if echo $SHELL | grep -q zsh ; then
 else
     chsh -s /bin/zsh
 fi
+ln -sf "$(pwd)/zsh/zshrc" ~/.zshrc
 
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 #git pull
