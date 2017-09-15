@@ -62,17 +62,17 @@ echo "ZSH is default shell"
 else
     chsh -s /bin/zsh
 fi
-ln -sf "$(pwd)/zsh/zshrc" ~/.zshrc
+
 
 
 if [ ! -d $HOME/.oh-my-zsh ]; then
     echo oh-my-zsh not  installing...
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    (sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &)
     echo Done!!
 else
     echo oh-my-zsh already install
 fi
-
+ln -sf "$(pwd)/zsh/zshrc" ~/.zshrc
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 #git pull
 #oh-my-zsh/plugins/fzf/install --bin > /dev/null || true
