@@ -67,12 +67,12 @@ fi
 
 
 if [ ! -d $HOME/.oh-my-zsh ]; then
-    echo oh-my-zsh not  installing...
-    #    (sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &)
-    ./zsh/ohmyzsh.sh
-    echo Done!!
+echo oh-my-zsh not  installing...
+#    (sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &)
+#    ./zsh/ohmyzsh.sh
+echo Done!!
 else
-    echo oh-my-zsh already install
+echo oh-my-zsh already install
 fi
 ln -sf "$(pwd)/zsh/zshrc" ~/.zshrc
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
