@@ -4,20 +4,14 @@ set -e
 
 #zsh init
 
+zsh_ins=0
+grep -q "/bin/zsh" /etc/shells || zsh_ins=1
 
-zsh_ins="$(grep -x "/bin/zsh" /etc/shells)"
-echo "debug info zsh_ins: "$zsh_ins" "
-
-
-if [ "/bin/zsh" = $zsh_ins ]; then
-    echo "debug info zsh_ins: "$zsh_ins""
+if [ $zsh_ins = 0 ]; then
     usr_zsh_ins=0
     grep -q "/usr/bin/zsh" /etc/shells || usr_zsh_ins=1
-    echo -------------------
-    echo "debug info usr_zsh_ins: "$usr_zsh_ins""
     if [ $usr_zsh_ins = 1 ]; then
         echo "zsh already installed, need add /etc/shell val= /usr/bin/zsh"
-        #        sudo -c echo "/usr/bin/zsh" >> /etc/shells
     else
         echo "zsh install for user"
     fi
