@@ -35,11 +35,18 @@ else
     ln -sf $(pwd)/vim/vim.config ~/.vim/vim.config
 fi
 
+#Tmux init
+ln -sf "$(pwd)/tmux/tmux.conf" ~/.tmux.conf
+
+#ZSH init
+
+
+
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 #git pull
 #oh-my-zsh/plugins/fzf/install --bin > /dev/null || true
 #ln -sfT "$(pwd)/vim" ~/.vim
 #ln -sf "$(pwd)/vim/vimrc" ~/.vimrc
-ln -sf "$(pwd)/tmux/tmux.conf" ~/.tmux.conf
+
 #ln -sf "$(pwd)/zshrc" ~/.zshrc
 #ln -sf "$(pwd)/zprofile" ~/.zprofile
