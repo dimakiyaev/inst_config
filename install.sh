@@ -58,11 +58,11 @@ fi
 
 #check user def shell and install oh-my-zsh
 
-#if echo $SHELL | grep -q zsh ; then
-#echo "ZSH is default shell"
-#else
-#    chsh -s /bin/zsh
-#fi
+if echo $SHELL | grep -q zsh ; then
+echo "ZSH is default shell"
+else
+    chsh -s /bin/zsh
+fi
 
 
 
